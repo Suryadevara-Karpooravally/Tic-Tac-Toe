@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table{
+			top:200px;
+			left: 200px;
+		}
+	</style>
+</head>
+<body>
+	<table border="2px" style="height:200px;width: 200px;border-color: red;text-align: center;">
+		<tr>
+			<td id='r11' onclick="call('r11')">.</td>
+			<td id='r12' onclick="call('r12')">.</td>
+			<td id='r13' onclick="call('r13')">.</td>
+		</tr>
+		<tr>
+			<td id='r21' onclick="call('r21')">.</td>
+			<td id='r22' onclick="call('r22')">.</td>
+			<td id='r23' onclick="call('r23')">.</td>
+		</tr>
+		<tr>
+			<td id='r31' onclick="call('r31')">.</td>
+			<td id='r32' onclick="call('r32')">.</td>
+			<td id='r33' onclick="call('r33')">.</td>
+		</tr>
+	</table>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		flag=0;
+		function call(id)
+		{
+			if(document.getElementById(id).innerHTML!='X' && document.getElementById(id).innerHTML!='O' ){
+			if(flag==0)
+			{
+				
+					document.getElementById(id).innerHTML="X";
+					flag=1;
+					check();
+				
+			}
+			else
+			{
+				
+				document.getElementById(id).innerHTML="O";
+				flag=0;
+				check();
+				
+			}
+
+			}
+		}
+		function check()
+		{
+			if (document.getElementById('r11').innerHTML==document.getElementById('r12').innerHTML && document.getElementById('r11').innerHTML==document.getElementById('r13').innerHTML && document.getElementById('r11').innerHTML=='X') {
+				document.getElementById('demo').innerHTML="player1 is the winner";
+			}
+			else if(document.getElementById('r11').innerHTML==document.getElementById('r22').innerHTML && document.getElementById('r11').innerHTML==document.getElementById('r33').innerHTML && document.getElementById('r11').innerHTML=='X') {
+				document.getElementById('demo').innerHTML="player1 is the winner";
+			}
+			else if(document.getElementById('r11').innerHTML==document.getElementById('r21').innerHTML && document.getElementById('r11').innerHTML==document.getElementById('r31').innerHTML && document.getElementById('r11').innerHTML=='X') {
+				document.getElementById('demo').innerHTML="player1 is the winner";
+			}
+			else if(document.getElementById('r12').innerHTML==document.getElementById('r22').innerHTML && document.getElementById('r12').innerHTML==document.getElementById('r32').innerHTML && document.getElementById('r12').innerHTML=='X') {
+				document.getElementById('demo').innerHTML="player1 is the winner";
+			}
+			else if(document.getElementById('r13').innerHTML==document.getElementById('r23').innerHTML && document.getElementById('r13').innerHTML==document.getElementById('r33').innerHTML && document.getElementById('r13').innerHTML=='X') {
+				document.getElementById('demo').innerHTML="player1 is the winner";
+			}
+			else if(document.getElementById('r13').innerHTML==document.getElementById('r22').innerHTML && document.getElementById('r13').innerHTML==document.getElementById('r31').innerHTML && document.getElementById('r13').innerHTML=='X') {
+				document.getElementById('demo').innerHTML="player1 is the winner";
+			}
+			else if(document.getElementById('r21').innerHTML==document.getElementById('r22').innerHTML && document.getElementById('r21').innerHTML==document.getElementById('r23').innerHTML && document.getElementById('r21').innerHTML=='X') {
+				document.getElementById('demo').innerHTML="player1 is the winner";
+			}
+			else if(document.getElementById('r31').innerHTML==document.getElementById('r32').innerHTML && document.getElementById('r31').innerHTML==document.getElementById('r33').innerHTML && document.getElementById('r31').innerHTML=='X') {
+				document.getElementById('demo').innerHTML="player1 is the winner";
+			}
+			else if (document.getElementById('r11').innerHTML==document.getElementById('r12').innerHTML && document.getElementById('r11').innerHTML==document.getElementById('r13').innerHTML && document.getElementById('r11').innerHTML=='O') {
+				document.getElementById('demo').innerHTML="player2 is the winner";
+			}
+			else if(document.getElementById('r11').innerHTML==document.getElementById('r22').innerHTML && document.getElementById('r11').innerHTML==document.getElementById('r33').innerHTML && document.getElementById('r11').innerHTML=='O') {
+				document.getElementById('demo').innerHTML="player2 is the winner";
+			}
+			else if(document.getElementById('r11').innerHTML==document.getElementById('r21').innerHTML && document.getElementById('r11').innerHTML==document.getElementById('r31').innerHTML && document.getElementById('r11').innerHTML=='O') {
+				document.getElementById('demo').innerHTML="player2 is the winner";
+			}
+			else if(document.getElementById('r12').innerHTML==document.getElementById('r22').innerHTML && document.getElementById('r12').innerHTML==document.getElementById('r32').innerHTML && document.getElementById('r12').innerHTML=='O') {
+				document.getElementById('demo').innerHTML="player2 is the winner";
+			}
+			else if(document.getElementById('r13').innerHTML==document.getElementById('r23').innerHTML && document.getElementById('r13').innerHTML==document.getElementById('r33').innerHTML && document.getElementById('r13').innerHTML=='O') {
+				document.getElementById('demo').innerHTML="player2 is the winner";
+			}
+			else if(document.getElementById('r13').innerHTML==document.getElementById('r22').innerHTML && document.getElementById('r13').innerHTML==document.getElementById('r31').innerHTML && document.getElementById('r13').innerHTML=='O') {
+				document.getElementById('demo').innerHTML="player2 is the winner";
+			}
+			else if(document.getElementById('r21').innerHTML==document.getElementById('r22').innerHTML && document.getElementById('r21').innerHTML==document.getElementById('r23').innerHTML && document.getElementById('r21').innerHTML=='O') {
+				document.getElementById('demo').innerHTML="player2 is the winner";
+			}
+			else if(document.getElementById('r31').innerHTML==document.getElementById('r32').innerHTML && document.getElementById('r31').innerHTML==document.getElementById('r33').innerHTML && document.getElementById('r31').innerHTML=='O') {
+				document.getElementById('demo').innerHTML="player2 is the winner";
+			}
+
+	}
+	</script>
+</body>
+</html>
